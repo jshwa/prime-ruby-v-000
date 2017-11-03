@@ -1,5 +1,8 @@
 # Add  code here!
 require 'pry'
+require 'benchmark'
+require 'bigdecimal/math'
+
 
 def prime?(num)
   hold = []
@@ -11,3 +14,6 @@ def prime?(num)
   end
   hold.include?(false) ? false : true
 end
+
+
+puts Benchmark.measure(prime?(13389))
